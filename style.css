@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 :root{
 
     --radius: 12px;
-    --spacing: 1.2em;
+    --spacing: 1.2rem;
     --spacing-button: 2em;
     --radius-button: 2em;
 
@@ -19,11 +20,11 @@
     --fw-700: 700;
 
     --fs-400: 1rem;
-    --fs-600: 1.25rem;
+    --fs-600: 1.2rem;
     --fs-700: 1.5rem;
 
-    --ff-lexende-deca: 'lexend-deca',sans-serief;
-    --ff-big-shoulders-display: 'big-shoulders-display',sans-serief;
+    --ff-lexende-deca: 'Lexend Deca', sans-serif;
+    --ff-big: 'Big Shoulders Display',sans-serif;
 }
 *{
     margin: 0;
@@ -52,12 +53,14 @@ header h1{
     font-size: var(--fs-700);
     color: var(--very-light-gray);
     margin-bottom: var(--spacing);
+    font-family: var(--ff-big);
 }
 .card__body{
-    --spacing: 3.2em;
+    --spacing: 3rem;
     font-size: var(--fs-600);
     margin-bottom: var(--spacing);
     color: var(--clr-transparent-white-p);
+    font-family: var(--ff-lexende-deca);
 }
 button{
     border: none;
@@ -66,6 +69,7 @@ button{
     font-size: var(--fs-400);
     font-weight: 700;
     background-color: var(--very-light-gray);
+    font-family: var(--ff-lexende-deca)
 }
 .Sedans{
     border-top-left-radius: var(--radius);
@@ -89,6 +93,7 @@ button{
 .luxury button{
     color: var(--clr-very-dark-cyan);
 }
+
 @media only screen and (min-width: 475px){
     :root{
         --fs-400: 1.15rem;
@@ -101,11 +106,13 @@ button{
         place-items: center;
     }
     main{
-        width: 50vw;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+        width: 50%;
+        display: table;
     }
 
+    .card{
+        display: table-cell;
+    }
     header img{
         width: 25%;
         margin-block: var(--spacing);
@@ -142,25 +149,4 @@ button{
     .luxury button:hover{
         background-color: var(--clr-very-dark-cyan);
     }
-    .attribution{
-        width: 100ch !important;
-        left: var(--spacing);
-        right: var(--spacing);
-        bottom: var(--spacing);
-        margin: 0 auto;
-    }
-}
-
-.attribution {
-
-    width: 30ch;
-    font-size: var(--fs-400);
-    text-align: center;
-    position: absolute;
-    left: var(--spacing);
-    right: var(--spacing);
-    margin-top:  1rem;
-}
-.attribution a{
-    color: hsl(228, 45%, 44%);
 }
